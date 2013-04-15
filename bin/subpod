@@ -15,3 +15,9 @@ CLActive.subcmd :install do |install|
     SubPod.run(:install)
   end
 end
+
+CLActive.subcmd :update do |update|
+  update.action do |opt|
+    SubPod.run(:install, true)
+  end
+end
