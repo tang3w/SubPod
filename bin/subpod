@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'clactive'
+require 'subpod'
+
+CLActive.option :version, '-v', '--version', 'Version of SubPod'
+
+CLActive.action do |opt|
+  puts SubPod::VERSION if opt[:version]
+end
+
+CLActive.subcmd :install do |install|
+  install.action do |opt|
+    SubPod.run(:install)
+  end
+end
