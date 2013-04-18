@@ -20,5 +20,5 @@ Gem::Specification.new do |s|
   s.require_paths = %w(lib)
 
   s.add_runtime_dependency 'cocoapods', '~> 0.18.0'
-  s.add_runtime_dependency 'clactive', '~> 0.0.5'
+  s.add_runtime_dependency 'clactive', '~> 0.0.12'
 end

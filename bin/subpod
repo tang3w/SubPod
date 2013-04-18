@@ -4,20 +4,16 @@ require 'rubygems'
 require 'clactive'
 require 'subpod'
 
-CLActive.option :version, '-v', '--version', 'Version of SubPod'
-
-CLActive.action do |opt|
-  puts SubPod::VERSION if opt[:version]
-end
-
-CLActive.subcmd :install do |install|
-  install.action do |opt|
-    SubPod.run(:install)
+CLActive do
+  subcmd :install do
+    action { SubPod.run(:install) }
   end
-end
+  subcmd :update do
+    action { SubPod.run(:install, true) }
+  end
 
-CLActive.subcmd :update do |update|
-  update.action do |opt|
-    SubPod.run(:install, true)
+  option :version, '-v', '--version', 'Version of SubPod'
+  action do |opt|
+    puts SubPod::VERSION if version?
   end
 end

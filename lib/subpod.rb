@@ -9,7 +9,7 @@ module SubPod
 
     def install(update_mode = false)
       cfg = Pod::Config.instance
-      cfg.podfile or fail Pod::Informative, "No `Podfile` found in the current working directory."
+      cfg.podfile or fail Pod::Informative, "No `Podfile' found in the current working directory."
       installer = Installer.new(cfg.sandbox, cfg.podfile, cfg.lockfile)
       installer.update_mode = update_mode
       installer.install!
