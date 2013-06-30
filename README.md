@@ -5,8 +5,19 @@ Make Pods as a sub project
 
 By SubPod, you can use Pods as a sub project instead of using workspace.
 
-Note: Do not use `subpod install` with `pod install`. Because of conflict.
+### Installation
 
-Command `subpod install` install Pods and integrate Pods to target project as a sub project.
+```bash
+gem install subpod
+```
 
-Command `subpod update` install with update mode.
+### How to use
+
+```bash
+subpod install #install Pods and integrate Pods to target project as a sub project.
+subpod update #install with update mode.
+```
+
+### Note
+
+Do **NOT** use `subpod` with `pod`. Because of conflict.
