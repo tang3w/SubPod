@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.license  = 'MIT'
   s.email    = 'tang3w@gmail.com'
   s.author   = 'Tang Tianyong'
-  s.homepage = 'http://tang3w.com'
+  s.homepage = 'https://github.com/tang3w/SubPod'
 
   s.summary     = 'CocoaPods helper'
   s.description = 'Make Pods as a sub project'
@@ -19,6 +19,6 @@ Gem::Specification.new do |s|
   s.executables = %w(subpod)
   s.require_paths = %w(lib)
 
-  s.add_runtime_dependency 'cocoapods', '~> 0.18.0'
-  s.add_runtime_dependency 'clactive', '~> 0.0.12'
+  s.add_runtime_dependency 'cocoapods', '~> 0.21.0.rc1'
+  s.add_runtime_dependency 'clactive', '~> 0.1.0'
 end

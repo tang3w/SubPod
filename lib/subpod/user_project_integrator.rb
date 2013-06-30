@@ -7,8 +7,8 @@ module SubPod
     end
 
     def integrate_user_targets
-      libraries_to_integrate.sort_by(&:name).each do |lib|
-        TargetIntegrator.new(lib).integrate!
+      targets_to_integrate.sort_by(&:name).each do |target|
+        TargetIntegrator.new(target).integrate!
       end
     end
 

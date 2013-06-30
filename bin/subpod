@@ -6,14 +6,20 @@ require 'subpod'
 
 CLActive do
   subcmd :install do
+    aka  :in
     action { SubPod.run(:install) }
   end
   subcmd :update do
+    aka  :up
     action { SubPod.run(:install, true) }
   end
 
   option :version, '-v', '--version', 'Version of SubPod'
   action do |opt|
-    puts SubPod::VERSION if version?
+    if version?
+      puts SubPod::VERSION
+    else
+      SubPod.run(:install)
+    end
   end
 end
